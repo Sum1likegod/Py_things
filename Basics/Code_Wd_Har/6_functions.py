@@ -35,3 +35,22 @@ b = int(input('Enter a Second Number '))
 print(f'The Addition of {a} and {b} is {addition(a,b)}')
 
 print('The addition of the numbers are', addition(int(input('Enter a number ')), int(input('Enter a Second Num '))))
+
+
+def arb_args(*multi):
+
+    li_fact = list()
+    for i in range(0, len(multi)):
+        factorial = 1
+        for factor in range(1, multi[i]+1):
+            factorial *= factor
+
+        li_fact.append(factorial)
+
+    return tuple(li_fact)
+
+
+print("The factorial is ", arb_args(4, 5, 6))
+
+
+
